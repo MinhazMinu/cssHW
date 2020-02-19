@@ -1,0 +1,107 @@
+.visiable-hidden {
+  width: 100vw;
+}
+
+.visiable,
+.hidden,
+.scroll,
+.auto {
+  display: block;
+  border: 2px solid rgb(9, 255, 0);
+  padding: 5px;
+  margin: 10px;
+  width: 20%;
+  height: 50px;
+}
+.visiable {
+  overflow: visible;
+  float: left;
+}
+.hidden {
+  overflow: hidden;
+  float: left;
+}
+.scroll {
+  overflow: scroll;
+  float: left;
+}
+.auto {
+  overflow: auto;
+  float: left;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: rgb(10, 10, 12);
+    color: #ffffff;
+  }
+  .visiable,
+  .hidden,
+  .scroll,
+  .auto {
+    width: 50%;
+    float: none;
+    margin-top: 40px;
+  }
+  .visiable::before,
+  .hidden::before,
+  .scroll::before,
+  .auto::before {
+    content: "media max width 992px =>>";
+    color: #faa406;
+  }
+
+  .hidden {
+    float: left;
+  }
+  .scroll {
+    float: right;
+  }
+  .auto {
+    float: left;
+  }
+
+  .visiable {
+    float: right;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: rgb(221, 70, 128);
+    color: #6330db;
+  }
+  .visiable,
+  .hidden,
+  .scroll,
+  .auto {
+    display: block;
+    width: 50%;
+    float: none;
+    margin-top: 40px;
+    animation-name: box;
+    animation-duration: 4s;
+  }
+  .visiable::before,
+  .hidden::before,
+  .scroll::before,
+  .auto::before {
+    content: "media max width 600px & ANIMATION =>>";
+    color: #dfff4e;
+  }
+  /* nimtion */
+  .visiable:hover,
+  .hidden:hover,
+  .scroll:hover,
+  .auto:hover {
+    animation: box 17s 1;
+  }
+  @keyframes box {
+    from {
+      transform: rotateY(0deg) scale(1);
+    }
+    to {
+      transform: rotateY(1080deg) scale(1.03);
+    }
+  }
+}
