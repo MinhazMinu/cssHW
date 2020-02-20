@@ -64,6 +64,100 @@
   .visiable {
     float: right;
   }
+
+  .hidden,
+  .auto {
+    animation: box1 10s 1;
+  }
+  @keyframes box1 {
+    0% {
+      display: block;
+      width: 50%;
+      position: relative;
+      left: 0px;
+      margin-top: 40px;
+      transform: rotate(-360deg);
+    }
+    25% {
+      display: block;
+      width: 50%;
+      position: relative;
+      left: 200px;
+      margin-top: 40px;
+      transform: rotate(360deg);
+    }
+    50% {
+      display: block;
+      width: 50%;
+      position: relative;
+      left: 0px;
+      margin-top: 40px;
+      transform: rotateY(-360deg);
+    }
+    75% {
+      display: block;
+      width: 50%;
+      position: relative;
+      left: 200px;
+      margin-top: 40px;
+      transform: rotateY(360deg);
+    }
+    100% {
+      display: block;
+      width: 50%;
+      position: relative;
+      left: 0px;
+      margin-top: 40px;
+      transform: rotate(-360deg);
+    }
+  }
+
+  .visiable,
+  .scroll {
+    animation: box2 10s 1;
+  }
+  @keyframes box2 {
+    0% {
+      display: block;
+      width: 50%;
+      position: relative;
+      right: 0px;
+      margin-top: 40px;
+      transform: rotate(-360deg);
+    }
+    25% {
+      display: block;
+      width: 50%;
+      position: relative;
+      right: 200px;
+      margin-top: 40px;
+      transform: rotate(360deg);
+    }
+    50% {
+      display: block;
+      width: 50%;
+      position: relative;
+      right: 0px;
+      margin-top: 40px;
+      transform: rotateY(-360deg);
+    }
+    75% {
+      display: block;
+      width: 50%;
+      position: relative;
+      right: 200px;
+      margin-top: 40px;
+      transform: rotateY(360deg);
+    }
+    100% {
+      display: block;
+      width: 50%;
+      position: relative;
+      right: 0px;
+      margin-top: 40px;
+      transform: rotate(-360deg);
+    }
+  }
 }
 
 @media screen and (max-width: 600px) {
