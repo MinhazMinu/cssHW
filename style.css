@@ -77,10 +77,11 @@
   .auto {
     display: block;
     width: 50%;
+    text-align: center;
     float: none;
     margin-top: 40px;
     animation-name: box;
-    animation-duration: 4s;
+    animation-duration: 10s;
   }
   .visiable::before,
   .hidden::before,
@@ -90,18 +91,44 @@
     color: #dfff4e;
   }
   /* nimtion */
-  .visiable:hover,
-  .hidden:hover,
-  .scroll:hover,
-  .auto:hover {
-    animation: box 17s 1;
+  .visiable,
+  .hidden,
+  .scroll,
+  .auto {
+    animation: box 10s 1;
   }
   @keyframes box {
-    from {
-      transform: rotateY(0deg) scale(1);
+    0% {
+      display: block;
+      width: 50%;
+      position: relative;
+      left: 200px;
+      margin-top: 40px;
+      transform: rotateY(0deg);
     }
-    to {
-      transform: rotateY(1080deg) scale(1.03);
+    25% {
+      display: block;
+      width: 50%;
+      position: relative;
+      left: 0px;
+      margin-top: 40px;
+      transform: rotateY(1080deg);
+    }
+    50% {
+      display: block;
+      width: 50%;
+      position: relative;
+      right: 200px;
+      margin-top: 40px;
+      transform: rotateY(0deg);
+    }
+    100% {
+      display: block;
+      width: 50%;
+      position: relative;
+      right: 0px;
+      margin-top: 40px;
+      transform: rotateY(1080deg);
     }
   }
 }
